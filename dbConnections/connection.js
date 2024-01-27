@@ -35,4 +35,4 @@ process.on("SIGINT", function () {
 ////////////////mongodb connected disconnected events///////////////////////////////////////////////
 
 
-module.exports = {mongoose}
+module.exports = mongoose;

@@ -1,12 +1,12 @@
 const mongoose = require("../dbConnections/connection");
-const { Schema, model } = require("mongoose");
+const { Schema, model } = mongoose;
 
 let userSchema = Schema({
   userName: { type: String, required: true },
-  password: Number,
+  password: { type: String, required: true},
   createdOn: { type: Date, default: Date.now },
 });
 
 const userModel = model("users", userSchema); //model === db-Collection
 
-module.exports = {userModel};
+module.exports = userModel;
